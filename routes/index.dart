@@ -9,14 +9,15 @@ Future<Response> onRequest(RequestContext context) async {
   }
   final fileName = queries['f'];
   final process = await Process.run(
-      'dart',
-      [
-        'run',
-        'mason_creatego_cli/bin/mason_creatego_cli.dart',
-        '-f', //stands for file name
-        fileName!,
-      ],
-      workingDirectory: '');
+    'dart',
+    [
+      'run',
+      'bin/mason_creatego_cli.dart',
+      '-f', //stands for file name
+      fileName!,
+    ],
+    workingDirectory: '/mason_creatego_cli',
+  );
   print('process.stdout');
   print(await process.stdout);
   print(await process.stderr);
