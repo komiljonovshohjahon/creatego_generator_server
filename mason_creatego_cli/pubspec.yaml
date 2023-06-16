@@ -12,6 +12,9 @@ dependencies:
   mason: ^0.1.0-dev.49
   args: ^2.4.2
 
+  github_client:
+    path: ../../github_client
+
 dev_dependencies:
   lints: ^2.0.0
   test: ^1.21.0
