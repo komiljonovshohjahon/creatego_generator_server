@@ -22,6 +22,7 @@ Future<Response> onRequest(RequestContext context) async {
   print('process.stdout');
   print(await process.stdout);
   print(await process.stderr);
+
   print('process.stdout');
-  return Response(body: 'Welcome to Dart Frog!');
+  return Response(body: 'Generated file: ${await process.stdout}');
 }

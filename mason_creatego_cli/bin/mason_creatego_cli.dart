@@ -48,10 +48,6 @@ Future<void> main(List<String> arguments) async {
 
   dcat(paths, showLineNumbers: argResults[lineNumber] as bool);
 
-  print('arguments');
-  print(paths);
-  print('arguments');
-
   //This argument comes from routes/index.dart as a github json config link
   String fileName = paths[0]; //paths[0];
 
@@ -63,12 +59,12 @@ Future<void> main(List<String> arguments) async {
 
   //upload the generated file to github widget book
   await uploadFileToGithub(generatedFilePath);
+  print(generatedFilePath);
 }
 
 Future<Map<String, dynamic>> downloadJsonFromGithub(String fileName) async {
   final fileLink =
       "https://raw.githubusercontent.com/komiljonovshohjahon/table_layout_demo/main/assets/$fileName.json";
-  print("The link is : $fileLink");
   return testJson;
 }
 

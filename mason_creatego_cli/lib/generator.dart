@@ -13,7 +13,6 @@ class Generator {
       fileConflictResolution: FileConflictResolution.overwrite,
       logger: Logger(theme: LogTheme()),
     );
-    print("GENERATE END");
     return res.first.path;
   }
 }
